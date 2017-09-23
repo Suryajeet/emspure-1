@@ -7,4 +7,10 @@
         padding-bottom: 15px;
         @include stretch();
 	}
-} 
+}
+:global{
+	.errorMsg{
+		color: red;
+		font-size: 12px;
+	}
+}

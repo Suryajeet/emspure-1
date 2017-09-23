@@ -69,20 +69,20 @@ class Modal extends Component {
 	}
 	render(){
 		const { modalType , modalProps , modalComponent } = this.props;
-		
+
 		const ModalComponent = MODAL_COMPONENTS[modalComponent] || DefaultComponent ;
 
 		return (
-			        <Dialog
-				          title={modalProps.title || null}
-				          actions={modalType && this.state.defaultConfig[modalType]["actions"]}
-				          modal={modalType && this.state.defaultConfig[modalType]["modal"] || false}	
-				          onRequestClose={this.handleClose}
-				          autoScrollBodyContent={true}
-				          open={modalType !== null}>
-							<ModalComponent {...modalProps} />
-			        </Dialog>
-			)
+      <Dialog
+          title={modalProps.title || null}
+          actions={modalType && this.state.defaultConfig[modalType]["actions"]}
+          modal={modalType && this.state.defaultConfig[modalType]["modal"] || false}
+          onRequestClose={this.handleClose}
+          autoScrollBodyContent={true}
+          open={modalType !== null}>
+			<ModalComponent {...modalProps} />
+      </Dialog>
+		)
 	}
 }
 const DefaultComponent = (props) => {

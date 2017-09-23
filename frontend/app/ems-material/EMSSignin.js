@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import styles from 'styles/emsMaterial/emsSignin';
 import {Link} from 'react-router';
 import {InputText,DropDown,StandardButton} from 'components/common/Forms';
+import Form from 'components/common/Form';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import PATHS from 'routes';
@@ -61,6 +62,7 @@ class SignIn extends Component{
 							onClick={login}
 						/>
 					</div>
+					<Form />
 					<div className={`${styles.links}`}>
 						<Link to={PATHS.signup}><span style={linkstyle}>Create an account</span></Link> | <span style={linkstyle}>Forgot password</span>
 					</div>

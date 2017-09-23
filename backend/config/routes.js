@@ -46,8 +46,8 @@ module.exports.routes = {
 
   'post /signin': 'UserController.signin',
   'post /signup': 'UserController.signup',
-  'put /userDetails': 'UserController.updateUser',
-  'delete /userDetails': 'UserController.deleteUser',
+  'put /user': 'UserController.updateUser',
+  'delete /user': 'UserController.deleteUser',
 
 
 
